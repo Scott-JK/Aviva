@@ -2,7 +2,7 @@
 <html lang="en" class="h-100">
 
 <head>
-    <title>App Name: A Coding Project by Scott Krantz</title>
+    <title>Aviva: A Coding Project by Scott Krantz</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -22,7 +22,7 @@
     <!-- ==== Nav Section ==== -->
     <nav class="navbar navbar-expand-md navbar-dark fixed-top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#"><img src="img/SKLogo-Light.svg" class="d-inline-block align-text-top" alt="Scott Krantz Logo" width="30" height="24"> APP NAME</a>
+            <a class="navbar-brand" href="#"><img src="img/SKLogo-Light.svg" class="d-inline-block align-text-top" alt="Scott Krantz Logo" width="30" height="24"> Aviva</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
                 aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -39,7 +39,7 @@
                         <a class="nav-link" href="code.html">The Code</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" target="_blank" href="#">Git Repo</a>
+                        <a class="nav-link" target="_blank" href="https://github.com/Scott-JK/Aviva">Git Repo</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" target="_blank" href="#">About</a>
@@ -50,8 +50,42 @@
     </nav>
     <!-- ==== Main Section ==== -->
     <main class="flex-shrink-0">
-        <div class="container">
-
+        <div class="container mt-5">
+            <div class="row row-cols-1 row-cols-lg-2">
+                <div class="col">
+                    <h1 class="display-5 fw-bold lh-1 mb-3">
+                        AVIVA: A Coding Project
+                    </h1>
+                    <h4 class="lead mb-4">
+                        Aviva is a palindrome. A palindrome is a word, phrase, or sequence that reads the same backward as forward. Write a program that checks if the phrase entered is a palindrome.
+                    </h4>
+                </div>
+                <div class="col">
+                    <h5 class="border-1 border-bottom border-primary">Enter a Word or Phrase to Check.</h5>
+                    <form class="row gx-3 gy-2">
+                        <div class="col">
+                            <input id="userString" type="text" class="form-control" placeholder="Enter a Word or Phrase." aria-label="Enter a Word or Phrase.">
+                        </div>
+                        <div class="col-12">
+                            <button type="button" id="btnSubmit" class="btn btn-success">Check It</button>
+                        </div>
+                        <div class="alert alert-success mt-5 invisible fade show" id="alert" role="alert">
+                            <h4 class="alert-heading">Well Done! You've entered a palindrome!</h4>
+                            <hr>
+                            <p class="mb-0" id="msg">
+                                <!--Insert a Message Here-->
+                            </p>
+                        </div>
+                        <div class="alert alert-danger mt-5 invisible fade show" id="alertFail" role="alert">
+                            <h4 class="alert-heading">I'm sorry to say, you did not enter a palindrome.</h4>
+                            <hr>
+                            <p class="mb-0" id="msgFail">
+                                <!--Insert a Message Here-->
+                            </p>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
     </main>
     <!-- ==== Footer Section ==== -->
@@ -68,8 +102,8 @@
                     <div class="row">
                         <div class="col social"><a href="https://www.linkedin.com/in/scott-krantz-32b5a8143/" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a></div>
                         <div class="col social"><a href="#" target="_blank"><i class="fab fa-github fa-2x"></i></a></div>
-                        <div class="col social"><a href="#" target="_blank"><i class="fab fa-twitter fa-2x"></i></a></div>
-                        <div class="col social"><a href="#" target="_blank"><i class="fab fa-youtube fa-2x"></i></a></div>
+                        <!--<div class="col social"><a href="#" target="_blank"><i class="fab fa-twitter fa-2x"></i></a></div>-->
+                        <!--<div class="col social"><a href="#" target="_blank"><i class="fab fa-youtube fa-2x"></i></a></div>-->
                     </div>
                 </div>
             </div>
@@ -83,6 +117,9 @@
         integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
     </script>
     <script src="js/site.js"></script>
+    <script>
+        document.getElementById("btnSubmit").addEventListener("click",getValue);
+    </script>
 </body>
 
 </html>
