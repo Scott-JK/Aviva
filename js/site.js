@@ -4,6 +4,10 @@ function getValue(){
     //Ensure the alert is invisible.
     document.getElementById("alert").classList.add("invisible");
 
+    //Remove the alert background color.
+    document.getElementById("alert").classList.remove("alert-success");
+    document.getElementById("alert").classList.remove("alert-danger");
+
     //Get user string from the page.
     let userString = document.getElementById("userString").value;
 
@@ -32,9 +36,11 @@ function checkForPalindrome(userString){
 
     if (revString == userString) {
         returnObj.msg = "Well Done! You've entered a palindrome!"
+        returnObj.alertColor = "alert-success"
     }
     else{
         returnObj.msg = "Sorry, you did not enter a palindrome."
+        returnObj.alertColor = "alert-danger"
     }
 
     returnObj.reversed = revString;
@@ -50,5 +56,6 @@ function displayMessage(returnObj){
     document.getElementById("alertHeader").innerHTML = returnObj.msg;
     document.getElementById("msg").innerHTML = `Your phrase reversed is: ${returnObj.reversed}`;
     document.getElementById("alert").classList.remove("invisible");
+    document.getElementById("alert").classList.add(returnObj.alertColor);
     
 }
